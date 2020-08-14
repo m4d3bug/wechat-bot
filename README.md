@@ -6,9 +6,22 @@
 
 使用 Mongodb 存储问题 / 答案 / 群组消息。
 
+## 背景
+
+大学新生开学（又到了每一年忙碌的时候），同一个（类似）问题会有很多人问，那为啥不把这些问题整理一下。
+
+如果有一个问答库，通过输入关键字让机器人发送答案，减少人工不必要的问答，提高效率。
+
+
+## 功能
+
+* `#` 字符触发特殊命令
+* 关键字回复问题
+
 ## 安装
 
 ```shell script
+git clone https://github.com/m4d3bug/wechat-bot.git
 cd wechat-bot
 npm install
 ```
@@ -59,4 +72,6 @@ $ tree
 | StringUtils.js     | Handler string             |
 
 
+## 参考文档
 
+* [https://wechaty.js.org/docs/](https://wechaty.js.org/docs/)
