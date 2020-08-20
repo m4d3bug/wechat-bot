@@ -10,7 +10,8 @@ async function getAnswer(text) {
         "question": {
             $regex: text,
         },
-        "type": "NEW"
+        "type": "NEW",
+        "mediaType": "TEXT"
     })
         .then(it => it.map(t => {
             if (t.displayQuestion === true) {

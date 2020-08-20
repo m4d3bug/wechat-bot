@@ -33,19 +33,16 @@ async function messageHandler(message, bot) {
     const answers = await getAnswer(text)
     answers.forEach(it => message.say(it))
 
-    if (text.startsWith("#")) {
-        switch (text) {
-            case '#关键字':
-                message.say(await getQuestionKey())
-                break;
-            default:
-                //
-                break;
-        }
+    switch (text) {
+        case '#关键字':
+        case '/help':
+            message.say(await getQuestionKey())
+            break;
+        default:
+            //
+            break;
+
     }
-
-
 }
-
 
 main().catch(error => console.log(`Error, ${error}`))
